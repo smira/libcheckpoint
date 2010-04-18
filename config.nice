@@ -1,0 +1,8 @@
+#! /bin/sh
+#
+# Created by configure
+
+'./configure' \
+'/usr/local/share/config.site' \
+'/usr/local/etc/config.site' \
+"$@"

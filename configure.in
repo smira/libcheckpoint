@@ -1,0 +1,77 @@
+# Process this file with autoconf to produce a configure script.
+AC_INIT([libcheckpoint],[2.0],[Smirnov.Andrey@gmail.com])
+
+PUT_CONFIG_NICE(config.nice)
+
+AC_CONFIG_SRCDIR([src/checkpoint.c])
+AM_INIT_AUTOMAKE([libcheckpoint], [2.0])
+
+AM_MAINTAINER_MODE
+
+AC_CANONICAL_HOST
+
+# Checks for programs.
+AC_PROG_CC
+AC_PROG_CXX
+AC_PROG_CPP
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+AC_PROG_AWK
+AC_DISABLE_SHARED
+AC_PROG_LIBTOOL
+
+# Checks for libraries.
+
+# Checks for header files.
+AC_HEADER_STDC
+AC_HEADER_SYS_WAIT
+AC_CHECK_HEADERS([assert.h elf.h errno.h ctype.h fcntl.h setjmp.h signal.h stdarg.h stddef.h stdlib.h stdio.h string.h strings.h syslog.h unistd.h sys/time.h sys/mman.h sys/uio.h sys/stat.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_TYPE_OFF_T
+AC_TYPE_SIZE_T
+AC_TYPE_PID_T
+AC_TYPE_SIGNAL
+AC_CHECK_TYPE(ptrdiff_t,long)                                               
+AC_CHECK_SIZEOF(unsigned short)                                             
+AC_CHECK_SIZEOF(unsigned)                                                   
+AC_CHECK_SIZEOF(unsigned long)                                              
+AC_CHECK_SIZEOF(char *)
+AC_CHECK_SIZEOF(ptrdiff_t)                                                  
+AC_CHECK_SIZEOF(size_t)                                                     
+ 
+# Checks for library functions.
+AC_FUNC_FORK
+AC_FUNC_MALLOC
+AC_FUNC_STAT
+AC_CHECK_FUNCS([alarm strerror strrchr mmap munmap memcmp memcpy memmove memset gettimeofday])
+
+AC_MSG_NOTICE([checking for multi-process checkpointing])
+
+CHECK_MPICH
+
+AC_MSG_NOTICE([checking for various system parameters])
+
+AC_SYS_PAGESIZE
+AC_SYS_STACKTOP
+AC_SYS_WRAP
+AC_SYS_ELF_BITS
+AC_SYS_HEAP_START
+AC_SYS_FORTRAN
+
+AC_MSG_NOTICE([checking for various library parameters])
+
+CHECK_PARAMS
+CHECK_COMPRESSION
+CHECK_BENCHMARKING
+
+AM_CONFIG_HEADER(config.h)
+
+AC_CONFIG_FILES([Makefile src/Makefile tools/Makefile test/Makefile test/mpi/Makefile Makefile.example 
+		 automatic/Makefile automatic/mpitrace/Makefile automatic/analyze/Makefile 
+		 automatic/online/Makefile])
+
+AC_OUTPUT
+

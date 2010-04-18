@@ -1,0 +1,346 @@
+/* config.h.in.  Generated from configure.in by autoheader.  */
+
+/* Elf Ehdr structure */
+#undef ELF_EHDR
+
+/* Elf Phdr structure */
+#undef ELF_PHDR
+
+/* Whether to enable library benchmarking */
+#undef ENABLE_BENCHMARK
+
+/* Whether to enable compression of checkpoints */
+#undef ENABLE_COMPRESSION
+
+/* Fortran argc */
+#undef FORTRAN_ARGC
+
+/* Fortran argv */
+#undef FORTRAN_ARGV
+
+/* Functions wrap */
+#undef F_REAL_CALLOC
+
+/* Functions wrap */
+#undef F_REAL_CLOSE
+
+/* Functions wrap */
+#undef F_REAL_DUP
+
+/* Functions wrap */
+#undef F_REAL_DUP2
+
+/* Functions wrap */
+#undef F_REAL_FREE
+
+/* Functions wrap */
+#undef F_REAL_LSEEK
+
+/* Functions wrap */
+#undef F_REAL_MALLOC
+
+/* Functions wrap */
+#undef F_REAL_MMAP
+
+/* Functions wrap */
+#undef F_REAL_MMAP2
+
+/* Functions wrap */
+#undef F_REAL_MUNMAP
+
+/* Functions wrap */
+#undef F_REAL_MUNMAP2
+
+/* Functions wrap */
+#undef F_REAL_OPEN
+
+/* Functions wrap */
+#undef F_REAL_READ
+
+/* Functions wrap */
+#undef F_REAL_READV
+
+/* Functions wrap */
+#undef F_REAL_REALLOC
+
+/* Functions wrap */
+#undef F_REAL_WRITE
+
+/* Functions wrap */
+#undef F_REAL_WRITEV
+
+/* Functions wrap */
+#undef F_WRAP_CALLOC
+
+/* Functions wrap */
+#undef F_WRAP_CLOSE
+
+/* Functions wrap */
+#undef F_WRAP_DUP
+
+/* Functions wrap */
+#undef F_WRAP_DUP2
+
+/* Functions wrap */
+#undef F_WRAP_FREE
+
+/* Functions wrap */
+#undef F_WRAP_LSEEK
+
+/* Functions wrap */
+#undef F_WRAP_MALLOC
+
+/* Functions wrap */
+#undef F_WRAP_MMAP
+
+/* Functions wrap */
+#undef F_WRAP_MMAP2
+
+/* Functions wrap */
+#undef F_WRAP_MUNMAP
+
+/* Functions wrap */
+#undef F_WRAP_MUNMAP2
+
+/* Functions wrap */
+#undef F_WRAP_OPEN
+
+/* Functions wrap */
+#undef F_WRAP_READ
+
+/* Functions wrap */
+#undef F_WRAP_READV
+
+/* Functions wrap */
+#undef F_WRAP_REALLOC
+
+/* Functions wrap */
+#undef F_WRAP_WRITE
+
+/* Functions wrap */
+#undef F_WRAP_WRITEV
+
+/* Page size of VM */
+#undef GPAGESIZE
+
+/* Define to 1 if you have the `alarm' function. */
+#undef HAVE_ALARM
+
+/* Define to 1 if you have the <assert.h> header file. */
+#undef HAVE_ASSERT_H
+
+/* Define to 1 if you have the <ctype.h> header file. */
+#undef HAVE_CTYPE_H
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* Define to 1 if you have the <elf.h> header file. */
+#undef HAVE_ELF_H
+
+/* Define to 1 if you have the <errno.h> header file. */
+#undef HAVE_ERRNO_H
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
+/* Define to 1 if you have the `fork' function. */
+#undef HAVE_FORK
+
+/* Define to 1 if you have the `gettimeofday' function. */
+#undef HAVE_GETTIMEOFDAY
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define to 1 if your system has a GNU libc compatible `malloc' function, and
+   to 0 otherwise. */
+#undef HAVE_MALLOC
+
+/* Define to 1 if you have the `memcmp' function. */
+#undef HAVE_MEMCMP
+
+/* Define to 1 if you have the `memcpy' function. */
+#undef HAVE_MEMCPY
+
+/* Define to 1 if you have the `memmove' function. */
+#undef HAVE_MEMMOVE
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the `memset' function. */
+#undef HAVE_MEMSET
+
+/* Define to 1 if you have the `mmap' function. */
+#undef HAVE_MMAP
+
+/* Define to 1 if you have the `munmap' function. */
+#undef HAVE_MUNMAP
+
+/* Define to 1 if you have the <setjmp.h> header file. */
+#undef HAVE_SETJMP_H
+
+/* Define to 1 if you have the <signal.h> header file. */
+#undef HAVE_SIGNAL_H
+
+/* Define to 1 if `stat' has the bug that it succeeds when given the
+   zero-length file name argument. */
+#undef HAVE_STAT_EMPTY_STRING_BUG
+
+/* Define to 1 if you have the <stdarg.h> header file. */
+#undef HAVE_STDARG_H
+
+/* Define to 1 if you have the <stddef.h> header file. */
+#undef HAVE_STDDEF_H
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdio.h> header file. */
+#undef HAVE_STDIO_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the `strerror' function. */
+#undef HAVE_STRERROR
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the `strrchr' function. */
+#undef HAVE_STRRCHR
+
+/* Define to 1 if you have the <syslog.h> header file. */
+#undef HAVE_SYSLOG_H
+
+/* Define to 1 if you have the <sys/mman.h> header file. */
+#undef HAVE_SYS_MMAN_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#undef HAVE_SYS_TIME_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have the <sys/uio.h> header file. */
+#undef HAVE_SYS_UIO_H
+
+/* Define to 1 if you have <sys/wait.h> that is POSIX.1 compatible. */
+#undef HAVE_SYS_WAIT_H
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define to 1 if you have the `vfork' function. */
+#undef HAVE_VFORK
+
+/* Define to 1 if you have the <vfork.h> header file. */
+#undef HAVE_VFORK_H
+
+/* Define to 1 if `fork' works. */
+#undef HAVE_WORKING_FORK
+
+/* Define to 1 if `vfork' works. */
+#undef HAVE_WORKING_VFORK
+
+/* Start of heap */
+#undef HEAP_START
+
+/* Define to 1 if `lstat' dereferences a symlink specified with a trailing
+   slash. */
+#undef LSTAT_FOLLOWS_SLASHED_SYMLINK
+
+/* Maximum number of file descriptors */
+#undef MAX_FILES
+
+/* Maximum number of memory areas */
+#undef MAX_MEM_AREAS
+
+/* Maximum number of memory mapped areas */
+#undef MAX_MMAPED
+
+/* Maximum number of processes */
+#undef MAX_PROCS
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Define as the return type of signal handlers (`int' or `void'). */
+#undef RETSIGTYPE
+
+/* The size of `char *', as computed by sizeof. */
+#undef SIZEOF_CHAR_P
+
+/* The size of `ptrdiff_t', as computed by sizeof. */
+#undef SIZEOF_PTRDIFF_T
+
+/* The size of `size_t', as computed by sizeof. */
+#undef SIZEOF_SIZE_T
+
+/* The size of `unsigned', as computed by sizeof. */
+#undef SIZEOF_UNSIGNED
+
+/* The size of `unsigned long', as computed by sizeof. */
+#undef SIZEOF_UNSIGNED_LONG
+
+/* The size of `unsigned short', as computed by sizeof. */
+#undef SIZEOF_UNSIGNED_SHORT
+
+/* Top of the stack */
+#undef STACK_TOP
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Version number of package */
+#undef VERSION
+
+/* True if multi-processcheckpointing with MPICH is enabled */
+#undef WITH_MPICH
+
+/* MPICH device to use */
+#undef WITH_MPICH_DEV
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#undef const
+
+/* Define to rpl_malloc if the replacement function should be used. */
+#undef malloc
+
+/* Define to `long int' if <sys/types.h> does not define. */
+#undef off_t
+
+/* Define to `int' if <sys/types.h> does not define. */
+#undef pid_t
+
+/* Define to `long' if <sys/types.h> does not define. */
+#undef ptrdiff_t
+
+/* Define to `unsigned int' if <sys/types.h> does not define. */
+#undef size_t
+
+/* Define as `fork' if `vfork' does not work. */
+#undef vfork

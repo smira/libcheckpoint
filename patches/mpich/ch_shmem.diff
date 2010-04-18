@@ -1,0 +1,52 @@
+--- mpid/ch_shmem/p2p.c.orig	Wed Mar 19 19:50:35 2003
++++ mpid/ch_shmem/p2p.c		Wed Mar 19 19:50:52 2003
+@@ -244,10 +244,10 @@
+ #ifndef P2_MAX_SYSV_SHMIDS 
+ #define P2_MAX_SYSV_SHMIDS 8
+ #endif
+-static int sysv_num_shmids = 0;
+-static int sysv_shmid[P2_MAX_SYSV_SHMIDS];
++int sysv_num_shmids = 0;
++int sysv_shmid[P2_MAX_SYSV_SHMIDS];
+ /* We save the addresses so that we can free them */
+-static void *sysv_shmat[P2_MAX_SYSV_SHMIDS];
++void *sysv_shmat[P2_MAX_SYSV_SHMIDS];
+ 
+ void *MD_init_shmem(int *memsize)
+ {
+--- mpid/ch_shmem/p2psemop.c.orig	Sat Mar 22 19:50:15 2003
++++ mpid/ch_shmem/p2psemop.c		Sun Mar 23 23:00:56 2003
+@@ -17,7 +17,7 @@
+    Sysv ipc's.  
+  */
+ 
+-static int sysv_semid0 = -1;
++int sysv_semid0 = -1;
+ struct p2_global_data {
+     int sysv_num_semids;
+     int sysv_semid[P2_MAX_SYSV_SEMIDS];
+@@ -163,18 +163,20 @@
+ void p2p_lock(p2p_lock_t *L)
+ {
+     sem_lock[0].sem_num = L->semnum;
+-    if (semop(L->semid,&sem_lock[0],1) < 0)
++    if (semop(sysv_semid0,&sem_lock[0],1) < 0)
+     {
+-        p2p_error("OOPS: semop lock failed\n",L->semid);
++	perror("semlock");
++        p2p_error("OOPS: semop lock failed\n",sysv_semid0);
+     }
+ }
+ 
+ void p2p_unlock( p2p_lock_t *L)
+ {
+     sem_unlock[0].sem_num = L->semnum;
+-    if (semop(L->semid,&sem_unlock[0],1) < 0)
++    if (semop(sysv_semid0, &sem_unlock[0],1) < 0)
+     {
+-        p2p_error("OOPS: semop unlock failed\n",L->semid);
++	perror("semunlock");
++        p2p_error("OOPS: semop unlock failed\n",sysv_semid0);
+     }
+ }
+
